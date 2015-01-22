@@ -49,6 +49,7 @@ install:
 
 	mkdir -p $(DESTDIR)/usr/lib/live
 	cp -a scripts/* $(DESTDIR)/usr/lib/live
+	chmod +x scripts/build/binary_efi
 
 	# Installing documentation
 	mkdir -p $(DESTDIR)/usr/share/doc/live-build
