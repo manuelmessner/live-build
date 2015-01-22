@@ -48,7 +48,7 @@ Create_lockfile .lock
 Check_architectures amd64 i386
 Check_crossarchitectures
 
-case "$LB_ARCHITECTURE" in
+case "$LB_ARCHITECTURES" in
 	amd64)
 		_EFI_TYPE=efi64
 		;;
@@ -56,7 +56,7 @@ case "$LB_ARCHITECTURE" in
 		_EFI_TYPE=efi32
 		;;
 	*)
-		echo "ERROR: can't provide EFI boot support to architecture $LB_ARCHITECTURE" >&2
+		echo "ERROR: can't provide EFI boot support to architecture $LB_ARCHITECTURES" >&2
 		exit 0
 		;;
 esac
